@@ -1,0 +1,27 @@
+<wxs module="m" src="./utils.wxs"></wxs>
+
+<swiper indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{background}}" wx:key="*this">
+          <swiper-item>
+            <view class="swiper-item">
+            <image src="{{item}}"></image>
+            </view>
+          </swiper-item>
+        </block>
+      </swiper>
+
+      <view class="list">
+      <view class="item" wx:for="{{list}}" wx:key="this" bindtap="toDetail" data-index="{{index}}">
+      <view class="item-left">
+      
+      <text>{{item.id}}</text>
+      </view>
+      <view class="item-right">
+      <view class="right-title">{{item.title}}</view>
+      <text>{{item.address}}</text>
+      <view>{{item.time}}</view>
+      <view>{{m.formatTime(item.time)}}</view>
+      </view>
+      </view>
+      </view>

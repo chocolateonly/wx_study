@@ -1,0 +1,3 @@
+<!--pages/details/detail.wxml-->
+<text>detail {{detailId}}</text>
+<view>{{title}}</view>

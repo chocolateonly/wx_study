@@ -1,0 +1,5 @@
+module.exports={
+  formatTime:function(time) {
+    return 'YYYY-MM-DD'
+  }
+}
